@@ -1,0 +1,23 @@
+{
+  "background_color": "#ffffff",
+  "categories": ["lifestyle", "music"],
+  "description": "Esta es una PWA de prueba",
+  "dir": "ltr",
+  "display_override": ["standalone", "fullscreen"],
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "logo-sg-tech-2x-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "lang": "es-MX",
+  "name": "SgTech App",
+  "orientation": "portrait",
+  "prefer_related_application": false,
+  "scope": "/",
+  "short_name": "SgTech App",
+  "start_url": "/",
+  "theme_color": "green"
+}

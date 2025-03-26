@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bus-payment-container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 97vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.display-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+  gap: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.logo-container {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  height: 120px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.logo-placeholder {
+  font-size: 20px;
+  color: #666;
+}
+
+.passenger-count {
+  position: relative;
+  height: 150px;
+  z-index: 2;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  min-width: 200px;
+  backdrop-filter: blur(5px);
+}
+
+.passenger-count:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.count-label {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.count-number {
+  font-size: 42px;
+  font-weight: 700;
+  color: #00b0f0;
+  letter-spacing: 1px;
+}
+
+.payment-status {
+  position: relative;
+  z-index: 2;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+.payment-status-paid {
+  background-color: #00772d;
+}
+
+.payment-status-insufficient {
+  background-color: #ff4444;
+}
+
+.payment-status-error {
+  background-color: #ff4444;
+}
+
+.payment-status-pending {
+  background-color: #00b0f0;
+}
+
+.prices-section {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.prices-section h2 {
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.price-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.card-reader-section {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.card-reader-text {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card-reader-visual {
+  display: inline-block;
+  position: relative;
+  width: 280px;
+  height: 180px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-reader-visual:hover {
+  transform: scale(1.02);
+}
+
+.card-reader-active {
+  animation: pulse 1.5s infinite;
+}
+
+.card-reader-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 15px;
+  background-color: #00b0f0;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-reader-middle {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.card-reader-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 15px;
+  background-color: #00b0f0;
+  border-radius: 0 0 8px 8px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Estilos específicos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bus-payment-container {
+    padding: 15px;
+  }
+
+  .display-header {
+    padding: 15px;
+  }
+
+  .logo-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .count-number {
+    font-size: 36px;
+  }
+
+  .payment-status {
+    width: 160px;
+    height: 160px;
+    font-size: 20px;
+  }
+
+  .price-item {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .card-reader-visual {
+    width: 260px;
+    height: 160px;
+  }
+}
+
+/* Estilos específicos para iPads */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .bus-payment-container {
+    max-width: 90%;
+  }
+
+  .logo-container {
+    width: 110px;
+    height: 110px;
+  }
+
+  .count-number {
+    font-size: 40px;
+  }
+
+  .payment-status {
+    width: 170px;
+    height: 170px;
+    font-size: 21px;
+  }
+}
+
+.last-payment-time {
+  color: #00b0f0;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.pwa-download-btn {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #00b0f0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.pwa-download-btn:hover {
+  background-color: #00772d;
+  transform: translateY(-2px);
+}
+
+.download-icon {
+  font-size: 16px;
+}
+
+.download-text {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .pwa-download-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .download-text {
+    display: none;
+  }
+} 
